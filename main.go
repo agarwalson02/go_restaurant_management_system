@@ -5,7 +5,7 @@ import (
 
 	"github.com/agarwalson02/go_restaurant_management_system/routes"
 	"github.com/gin-gonic/gin"
-	"go.mongogb.org/mongo-driver/mongo"
+	"go.mongodb.org/mongo-driver/mongo"
 )
 
 func main(){
