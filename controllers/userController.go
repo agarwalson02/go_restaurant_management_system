@@ -78,7 +78,6 @@ func SignUp() gin.HandlerFunc {
 			return
 		}
 
-
 		password := HashPassword(*user.Password)
 		user.Password = &password
 
@@ -137,7 +136,6 @@ func Login() gin.HandlerFunc {
 	}
 }
 
-
 func GetUsers() gin.HandlerFunc {
 	return func(c *gin.Context) {
 		var ctx, cancel = context.WithTimeout(context.Background(), 100*time.Second)
@@ -188,7 +186,6 @@ func GetUsers() gin.HandlerFunc {
 	}
 }
 
-
 func GetUser() gin.HandlerFunc {
 	return func(c *gin.Context) {
 		var ctx, cancel = context.WithTimeout(context.Background(), 100*time.Second)
@@ -205,4 +202,3 @@ func GetUser() gin.HandlerFunc {
 		c.JSON(http.StatusOK, user)
 	}
 }
-
